@@ -20,6 +20,7 @@
         android:id="@+id/JoinLobby"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="goToHostActivity"
         android:text="Join Lobby"
 
         app:layout_constraintBottom_toTopOf="@+id/CodeView"
