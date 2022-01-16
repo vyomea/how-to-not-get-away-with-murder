@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Map {
-    private HashMap<Rectangle,Room> rooms;
+    private ArrayList<Room> rooms;
     private String name;
     private String description;
     private int id;
@@ -27,15 +27,16 @@ public class Map {
         this.name = name;
     }
 
-    public Map(HashMap<Rectangle, Room> rooms, String description,String name, int id) {
+    public Map(ArrayList<Room> rooms, String description,String name, int id) {
         this.rooms = rooms;
         this.description = description;
         this.name = name;
         this.id = id;
     }
 
-    public Map(){
-
+    public Map()
+    {
+        rooms= new ArrayList<Room>();
     }
 
     public void update(){
@@ -43,11 +44,11 @@ public class Map {
         db.collection("maps").document(String.valueOf(this.id)).set(this);
     }
 
-    public HashMap<Rectangle, Room> getRooms() {
+    public ArrayList<Room> getRooms() {
         return rooms;
     }
 
-    public void setRooms(HashMap<Rectangle, Room> rooms) {
+    public void setRooms(ArrayList<Room> rooms) {
         this.rooms = rooms;
     }
 
@@ -57,5 +58,10 @@ public class Map {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void addRoom(Room r)
+    {
+        rooms.add(r);
     }
 }
