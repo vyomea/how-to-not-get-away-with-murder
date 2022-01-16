@@ -1,5 +1,7 @@
 package com.example.murdermystery;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.HashMap;
 
 public class Map {
@@ -29,6 +31,11 @@ public class Map {
         this.description = description;
         this.name = name;
         this.id = id;
+    }
+
+    public void update(){
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("maps").document(String.valueOf(this.id)).set(this);
     }
 
     public HashMap<Rectangle, Room> getRooms() {

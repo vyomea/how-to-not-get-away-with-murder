@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToHostActivity(View view) {
+
         Intent intent = new Intent(this,HostActivity.class);
         startActivity(intent);
     }
