@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MurderMystery">
         <activity
+            android:name=".ShowDescription"
+            android:exported="true" />
+        <activity
+            android:name=".SelectMap"
+            android:exported="true" />
             android:name=".CanvasActivity"
             android:exported="false"/>
         <activity

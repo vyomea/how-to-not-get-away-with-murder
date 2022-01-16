@@ -5,7 +5,6 @@ import androidx.core.content.ContextCompat;
 
 
 import android.content.ActivityNotFoundException;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Build;
 import android.content.Intent;
