@@ -5,10 +5,17 @@ import java.util.HashMap;
 public class Room {
     public HashMap<Location,Room> interactions;
     private String imagePath;
+    private CorrectRectangle rect;
 
-    public Room(HashMap<Location, Room> interactions, String imagePath) {
+    public Room(HashMap<Location, Room> interactions, String imagePath, CorrectRectangle rect) {
         this.interactions = interactions;
         this.imagePath = imagePath;
+        this.rect=rect;
+    }
+
+    public Room()
+    {
+
     }
 
     public HashMap<Location, Room> getInteractions() {
@@ -25,5 +32,15 @@ public class Room {
 
     public void setImagePath(String imagePath) {
         this.imagePath = imagePath;
+    }
+
+    public CorrectRectangle getRect()
+    {
+        return rect;
+    }
+
+    public void setRect(CorrectRectangle rect)
+    {
+        this.rect=rect;
     }
 }
