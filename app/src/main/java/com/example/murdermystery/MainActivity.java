@@ -2,6 +2,8 @@ package com.example.murdermystery;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Canvas;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
