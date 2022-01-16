@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MurderMystery">
         <activity
-            android:name=".UploadPhotoActivity" />
+            android:name=".UploadPhotoActivity"/>
         <activity
             android:name=".ShowDescription"
             android:exported="true" />
