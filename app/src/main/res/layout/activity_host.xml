@@ -7,9 +7,9 @@
     tools:context=".HostActivity">
 
     <ListView
-        android:id="@+id/simpleListView"
+        android:id="@+id/usernameListView"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="300dp"
         android:divider="@color/material_blue_grey_800"
         android:dividerHeight="1dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,13 +18,15 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height=      "wrap_content"
         android:layout_marginTop="24dp"
         android:text="Select Map"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/simpleListView" />
+        app:layout_constraintTop_toBottomOf="@+id/usernameListView"
+        android:onClick="goToSelectActivity" />
+        app:layout_constraintTop_toBottomOf="@+id/usernameListView" />
 
     <TextView
         android:id="@+id/textView2"

@@ -17,6 +17,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.SetOptions;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -57,6 +62,15 @@ public class SignupActivity extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
                             Intent intent = new Intent(view.getContext(), MainActivity.class);
                             startActivity(intent);
+                            String userID = user.getUid();
+                            // Access a Cloud Firestore instance from your Activity
+
+                            FirebaseFirestore db = FirebaseFirestore.getInstance();
+                            // Update one field, creating the document if it does not already exist.
+                            Map<String, Object> data = new HashMap<>();
+                            data.put("display_name", username);
+
+                            db.collection("users").document(userID).set(data);
 
                         } else {
                             // If sign in fails, display a message to the user.
