@@ -12,10 +12,12 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.TextPaint;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -27,9 +29,8 @@ import java.util.Vector;
  */
 public class Canvas1 extends View {
 
-    private final int paintColor = Color.BLACK;
+    private final int paintColor = Color.RED;
     private Paint drawPaint;
-    float[][] rectangles = {};
     ArrayList<CorrectRectangle> adapter = new ArrayList<>();
     float pointX;
     float pointY;
@@ -52,21 +53,7 @@ public class Canvas1 extends View {
         drawPaint.setStrokeJoin(Paint.Join.ROUND);
         drawPaint.setStrokeCap(Paint.Cap.ROUND);
     }
-    @Override
-    protected void onAttachedToWindow() {
-        super.onAttachedToWindow();
-                setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final Context context = Canvas1.this.getContext();
-                Intent intent = new Intent(context , RoomGenerationActivity.class);
-                Bundle args = new Bundle();
-                args.putSerializable("ARRAYLIST",(Serializable)adapter);
-                intent.putExtra("BUNDLE",args);
-                context.startActivity(intent);
-            }
-        });
-    }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         pointX = event.getX();

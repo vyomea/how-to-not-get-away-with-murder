@@ -12,9 +12,9 @@
         <activity
             android:name=".CanvasActivity"
             android:exported="false"/>
-        <activity
-            android:name=".RoomGenerationActivity"
-            android:exported="false" />
+
+        <activity android:name=".RoomGenerationActivity"
+            android:exported="false"/>
         <activity
             android:name=".JoinActivity"
             android:exported="false" />
