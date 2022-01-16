@@ -7,10 +7,11 @@ public class Lobby {
     private ArrayList<User> participants;
     private Map selectedMap;
 
-    public Lobby(ArrayList<User> participants) {
+    public Lobby(ArrayList<User> participants, String lobbyCode, Map selectedMap) {
+
         this.participants = participants;
-        this.lobbyCode = "TODO";
-        this.selectedMap = null;
+        this.lobbyCode = lobbyCode;
+        this.selectedMap = selectedMap;
     }
 
     public String getLobbyCode() {
