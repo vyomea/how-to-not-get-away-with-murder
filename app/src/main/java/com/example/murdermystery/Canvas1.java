@@ -79,8 +79,14 @@ public class Canvas1 extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
+        Map map=new Map();
         for (int i = 0; i < adapter.size(); i++) {
             canvas.drawRect(adapter.get(i).getP1(), adapter.get(i).getP2(), adapter.get(i).getP3(), adapter.get(i).getP4(), drawPaint);
+            Room room=new Room(null,"s",adapter.get(i));
+            map.addRoom(room);
         }
+        Map m =new Map(map.getRooms(),"siiiiuuuu","allRooms",1111);
+        m.update();
+
     }
 }
