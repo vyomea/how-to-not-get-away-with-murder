@@ -19,10 +19,11 @@ public class MainActivity extends AppCompatActivity {
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser == null) {
+        if (currentUser != null) {
             //reload();
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         }
+
     }
 }
