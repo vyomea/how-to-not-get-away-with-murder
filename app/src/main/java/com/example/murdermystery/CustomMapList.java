@@ -37,7 +37,6 @@ public class CustomMapList extends ArrayAdapter<Map> {
 
         TextView mapName = view.findViewById(R.id.map_name);
         mapName.setText("map.getName()");
-        Log.d("ash",mapName.getText().toString());
 
 
         return view;
