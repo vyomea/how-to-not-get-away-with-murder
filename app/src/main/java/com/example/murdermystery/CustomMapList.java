@@ -36,7 +36,7 @@ public class CustomMapList extends ArrayAdapter<Map> {
         Map map = maps.get(position);
 
         TextView mapName = view.findViewById(R.id.map_name);
-        mapName.setText("map.getName()");
+        mapName.setText(map.getName());
 
 
         return view;
