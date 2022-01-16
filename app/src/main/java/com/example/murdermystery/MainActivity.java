@@ -8,7 +8,6 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Build;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -22,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         FirebaseAuth mAuth;
         // ...
         // Initialize Firebase Auth
