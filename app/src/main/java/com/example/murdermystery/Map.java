@@ -2,6 +2,7 @@ package com.example.murdermystery;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Map {
@@ -31,6 +32,10 @@ public class Map {
         this.description = description;
         this.name = name;
         this.id = id;
+    }
+
+    public Map(){
+
     }
 
     public void update(){
