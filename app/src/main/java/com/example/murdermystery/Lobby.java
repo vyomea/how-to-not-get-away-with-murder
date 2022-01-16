@@ -13,6 +13,8 @@ public class Lobby {
         this.selectedMap = selectedMap;
     }
 
+    public Lobby(){};
+
     public String getLobbyCode() {
         return lobbyCode;
     }
