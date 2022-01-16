@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Canvas1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
@@ -25,6 +26,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.936"
         tools:ignore="SpeakableTextPresentCheck"
-        android:text="Okay"
-        android:onClick="sendToRoomCreate"/>
+        android:text="Okay"/>
 </LinearLayout>

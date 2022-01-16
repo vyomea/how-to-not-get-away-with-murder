@@ -1,6 +1,7 @@
 package com.example.murdermystery;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -48,7 +49,18 @@ public class Canvas1 extends View {
         drawPaint.setStrokeJoin(Paint.Join.ROUND);
         drawPaint.setStrokeCap(Paint.Cap.ROUND);
     }
-
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Context context = Canvas1.this.getContext();
+                Intent intent = new Intent(context , ArizaDetaylari.class);
+                context.startActivity(intent);
+            }
+        });
+    }
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         pointX = event.getX();
