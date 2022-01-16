@@ -26,5 +26,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.936"
         tools:ignore="SpeakableTextPresentCheck"
-        android:text="Okay"/>
+        android:text="Okay"
+        android:onClick="goToRoomGeneration"/>
 </LinearLayout>

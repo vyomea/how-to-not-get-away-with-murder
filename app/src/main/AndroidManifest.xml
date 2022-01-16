@@ -11,6 +11,9 @@
         android:theme="@style/Theme.MurderMystery">
         <activity
             android:name=".CanvasActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".RoomGenerationActivity"
             android:exported="false" />
         <activity
             android:name=".JoinActivity"

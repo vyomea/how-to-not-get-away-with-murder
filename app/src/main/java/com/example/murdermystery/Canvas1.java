@@ -9,12 +9,15 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
@@ -52,11 +55,14 @@ public class Canvas1 extends View {
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        setOnClickListener(new OnClickListener() {
+                setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 final Context context = Canvas1.this.getContext();
-                Intent intent = new Intent(context , ArizaDetaylari.class);
+                Intent intent = new Intent(context , RoomGenerationActivity.class);
+                Bundle args = new Bundle();
+                args.putSerializable("ARRAYLIST",(Serializable)adapter);
+                intent.putExtra("BUNDLE",args);
                 context.startActivity(intent);
             }
         });

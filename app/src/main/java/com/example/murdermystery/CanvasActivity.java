@@ -13,8 +13,8 @@ public class CanvasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_canvas);
     }
-    public void sendToRoomActivity(View view){
-        Intent intent = new Intent (this, RoomGeneratorActivity.class);
+    public void goToRoomGeneration(View view){
+        Intent intent = new Intent(this , RoomGenerationActivity.class);
         startActivity(intent);
     }
 }
