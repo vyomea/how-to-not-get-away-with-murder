@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class ListView extends AppCompatActivity {
+public class CustomListView extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
