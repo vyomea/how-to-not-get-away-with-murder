@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MurderMystery">
         <activity
+            android:name=".SelectMap"
+            android:exported="true" />
+        <activity
             android:name=".ListView"
             android:exported="true" />
         <activity
