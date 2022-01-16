@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MurderMystery">
         <activity
+            android:name=".CanvasActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".RoomGenerationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".JoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListView"
             android:exported="true" />
         <activity
