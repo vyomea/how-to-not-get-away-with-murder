@@ -28,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         //FirebaseAuth.getInstance().signOut();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-//        Intent intent2 = new Intent(this, UploadPhotoActivity.class);
-//        startActivity(intent2);
         if (currentUser == null) {
             //reload();
             Intent intent = new Intent(this, LoginActivity.class);
