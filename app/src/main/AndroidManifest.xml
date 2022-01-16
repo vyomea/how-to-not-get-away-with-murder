@@ -27,6 +27,13 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
+            android:name=".ListView"
+            android:exported="true" />
+        <activity
+            android:name=".HostActivity"
+            android:exported="true" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
